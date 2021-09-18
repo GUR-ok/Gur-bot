@@ -7,18 +7,15 @@ spring:
     database: POSTGRESQL
     show-sql: true
     hibernate:
-      ddl-auto: validate
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO}
     properties:
       format_sql: true
   datasource:
     platform: postgres
-    url:
-    username:
-    password:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
     driverClassName: org.postgresql.Driver
-
-server:
-  port: 8080
 
 logging:
   level:
@@ -27,5 +24,5 @@ logging:
     gur.bot: INFO
 
 bot:
-  name:
-  token:
+  name: ${BOT_NAME}
+  token: ${BOT_TOKEN}
