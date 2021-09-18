@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: gur-bot
+  main:
+    banner-mode: off
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      format_sql: true
+  datasource:
+    platform: postgres
+    url:
+    username:
+    password:
+    driverClassName: org.postgresql.Driver
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: ERROR
+    org.springframework: ERROR
+    gur.bot: INFO
+
+bot:
+  name:
+  token:
